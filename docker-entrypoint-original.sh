@@ -61,12 +61,6 @@ if [[ "$1" == apache2* ]] || [ "$1" == php-fpm ]; then
 			curl -o BaltimoreCyberTrustRoot.crt.pem -fsL "https://www.digicert.com/CACerts/BaltimoreCyberTrustRoot.crt.pem"
 		fi
 
-		# Install DigiCertGlobalRootG2.crt.pem
-		if [ ! -e DigiCertGlobalRootG2.crt.pem ]; then
-			echo "Downloading DigiCertGlobalRootG2.crt.pem"
-			curl -o DigiCertGlobalRootG2.crt.pem -fsL "https://cacerts.digicert.com/DigiCertGlobalRootG2.crt.pem"
-		fi
-
 		# Install Redis Cache WordPress Plugin
 	    if [ ! -e wp-content/plugins/redis-cache ]; then
 
